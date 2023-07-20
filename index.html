@@ -61,18 +61,50 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>About</h1>
+                    <h1>The Problem</h1>
+                    <p>The world depends on software, and software depends on secure and correct inputs. Ensuring these inputs conform 
+                        to the requirements of the software is called input validation. This task is often done using regular expressions(REGEX).
+                         However, regular expressions have significant drawbacks, such as exponential runtime, and present security 
+                         vulnerabilities due to the inability to regression-test expressions. Parsing Expression Grammars (PEG) are more 
+                         efficient but have their own drawbacks including the potential for linear space needed with relation to the input. 
+                         Rosie is a backtracking implementation of a PEG with modular library functionality that includes test cases. 
+                         As we develop Rosie 2.0 we would like to add the ability to “look behind” during matching, as regular expressions 
+                         typically allow to further encourage library reuse. In Rosie, the match context is a parse tree, so we define “PEG look behind” 
+                         as applying a predicate to the tree created during the match process as opposed to the character sequence as in most regular 
+                         expression languages. A requirement for this approach is to be able to express a path in a tree-like data structure. JSONPath 
+                         is a somewhat popular method for traversing tree structures which are used in Rosie. This will allow us to apply the predicate 
+                         to the tree-like structure as it is being built. We believe that once the feature is fully implemented and optimized it should 
+                         have a runtime efficiency that is linear in the number of potential outputs of the original match before the predicate is applied. 
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- What we do Section -->
+    <!-- References Section -->
     <section id="references" class="references-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1>References</h1>
+                    <h1>References and other notable links</h1>
+                    <p>
+                        A list of academic papers detailing issues with REGEX:\n
+                    <ul>
+                        <li><a href="https://davisjam.github.io/files/publications/MichaelDonohueDavisLeeServant-RegexesAreHard-ASE19.pdf">Regexes are hard.</a></li>
+                        <li><a href="https://wangpeipei90.github.io/papers/msr2020_preprint.pdf">Regex bugs are most often due to semantic errors.</a></li>
+                        <li><a href="http://kstolee.github.io/papers/fse2018.pdf">Regex are under-tested.</a></li>
+                        <li><a href="https://davisjam.github.io/files/publications/DavisMichaelCoghlanServantLee-LinguaFranca-ESECFSE19.pdf">Regexes are not very portable.</a></li>
+                        <li><a href="https://davisjam.github.io/files/publications/DavisServantLee-SelectiveMemo-IEEE-SP21.pdf">Regex denial of service mitigations require regex implementation changes.</a></li>
+                        <li><a href="https://cs.smu.ca/~nic.santean/art/RegexIntRe.pdf">Regex can be non-deterministic (due to implementation bugs).</a></li>
+                        </ul>
+                    </p>
+                    <p><a href="https://jamiejennings.com/posts/2021-09-07-dont-look-back-1">The problems with Regex as explained by Dr. Jennings</a>. 
+                         </p>
+
+                    <p><a href="https://jsonpath.com/">JSONPath online evaluator</a></p>
+                    <p><a href="https://cwe.mitre.org/top25/archive/2023/2023_top25_list.html#top25list">2023 CWE Top 25 Most Dangerous Software Weaknesses</a></p>
+                    <p><a href="https://rosie-lang.org/">Rosie pattern language blog and download link</a></p>
+                    
                 </div>
             </div>
         </div>
