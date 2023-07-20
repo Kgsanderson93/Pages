@@ -83,7 +83,7 @@ html {
     display:flex;
     padding-top:20%;
 }
-img{
+#photo-resize{
     transition: transform .2s;
     width:650px;
     height:500px;
@@ -92,7 +92,7 @@ img{
     border-radius: 10px;
     border: 1px solid black;
 }
-img:hover{
+img:click{
     transform:scale(2.5);
 }
 
